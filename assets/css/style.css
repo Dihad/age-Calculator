@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root {
+  --Orange: hsl(30, 100%, 50%); /* New orange color */
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+  --Dark-grey: hsl(0, 0%, 20%);
+  --Darker-grey: hsl(0, 0%, 15%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--Dark-grey);
+  color: var(--White);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  background: var(--Darker-grey);
+  width: 750px;
+  padding: 50px;
+  border-radius: 20px;
+  border-bottom-right-radius: 40%;
+  position: relative;
+}
+
+.input {
+  display: flex;
+  margin-bottom: 35px;
+}
+
+input {
+  font-size: 32px;
+  width: 150px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: 0.5px solid var(--Light-grey);
+  outline: none;
+  letter-spacing: 2px;
+  caret-color: var(--Orange); /* Updated caret color */
+  background: var(--Off-black);
+  color: var(--White);
+}
+
+h6 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--Light-red);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--Light-grey);
+}
+
+button {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: var(--Orange); /* Updated button background */
+  right: 50px;
+  margin-top: -32px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: hsl(30, 100%, 40%); /* Darker orange on hover */
+}
+
+input:focus {
+  border: 0.5px solid var(--Orange);
+}
+
+p.error {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--Light-red);
+  font-style: italic;
+  margin: 5px 0;
+}
+
+.result h1 {
+  font-size: 60px;
+  font-style: italic;
+  color: var(--White);
+}
+
+.result span {
+  color: var(--Orange); /* Updated result span color */
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--White);
+}
+
+.attribution a {
+  color: hsl(30, 100%, 70%); /* Lighter orange for links */
+}
+
+@media only screen and (max-width: 375px) {
+  .input {
+    margin-bottom: 40px;
+  }
+  input {
+    font-size: 18px;
+    width: 80px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  .content {
+    background: var(--Darker-grey);
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    border-bottom-right-radius: 30%;
+    position: relative;
+  }
+  .result h1 {
+    font-size: 45px;
+    font-style: italic;
+  }
+  p.error {
+    font-size: 10px;
+  }
+  button {
+    right: 40%;
+  }
+  .result {
+    margin-top: 40px;
+  }
+}
+
